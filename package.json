@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next strat"
+    "start": "next strat",
+    "lint": "eslint . --ext .js, .jsx, .ts, .tsx --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "next": "^15.1.11",
