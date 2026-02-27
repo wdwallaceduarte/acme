@@ -11,8 +11,8 @@
     "build": "next build",
     "start": "next strat",
     "lint": "eslint . --ext .js, .jsx, .ts, .tsx --no-error-on-unmatched-pattern",
-  "format": "prettier --write .",
-  "format:check": "prettier --check ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "next": "^15.5.12",
