@@ -21,17 +21,17 @@ async function main() {
   console.log('Usuário criado com sucesso.');
 
   const customer_data = [{
-    name: 'Alex Bessa',
-    email: 'alex@email.com',
-    imageUrl: 'https://ui-avatars.com/api/?name=Alex+Bessa&background=random'
+    name: 'Wallace Duarte',
+    email: 'wallace@email.com',
+    imageUrl: 'https://ui-avatars.com/api/?name=Wallace+Duarte&background=random'
   }, {
-    name: 'Valdiana Bessa',
-    email: 'valdiana@email.com',
-    imageUrl: 'https://ui-avatars.com/api/?name=Valdiana+Bessa&background=random'
+    name: 'Daniele Duarte',
+    email: 'daniele@email.com',
+    imageUrl: 'https://ui-avatars.com/api/?name=Daniele+Duarte&background=random'
   }, {
-    name: 'Timóteo Bessa',
-    email: 'timoteo@email.com',
-    imageUrl: 'https://ui-avatars.com/api/?name=Timoteo+Bessa&background=random'
+    name: 'Cristine Elaine',
+    email: 'cristine@email.com',
+    imageUrl: 'https://ui-avatars.com/api/?name=Cristine+Elaine&background=random'
   }];
 
   const customers = [];
@@ -48,62 +48,62 @@ async function main() {
   };
 
   const invoicesData = [{
-    amount: 15785,
+    amount: 15781,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-29',
     customer: customers[0]
   }, {
-    amount: 5722,
+    amount: 15782,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-15',
     customer: customers[1]
   }, {
-    amount: 154225785,
+    amount: 157813,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-12',
     customer: customers[2]
   }, {
-    amount: 15474785,
+    amount: 15784,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-15',
     customer: customers[0]
   }, {
-    amount: 4747,
+    amount: 15785,
     status: InvoiceStatus.PAGO,
     date: '2026-05-05',
     customer: customers[1]
   }, {
-    amount: 747,
+    amount: 15786,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-16',
     customer: customers[2]
   }, {
-    amount: 7575,
+    amount: 15787,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-17',
     customer: customers[0]
   }, {
-    amount: 5777,
+    amount: 15788,
     status: InvoiceStatus.PAGO,
     date: '2026-05-03',
     customer: customers[1]
   }, {
-    amount: 5757,
+    amount: 15789,
     status: InvoiceStatus.PAGO,
     date: '2026-05-01',
     customer: customers[2]
   }, {
-    amount: 5757,
+    amount: 157810,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-20',
     customer: customers[0]
   }, {
-    amount: 5757,
+    amount: 157811,
     status: InvoiceStatus.PAGO,
     date: '2026-05-08',
     customer: customers[1]
   }, {
-    amount: 47477,
+    amount: 157812,
     status: InvoiceStatus.PENDENTE,
     date: '2026-05-21',
     customer: customers[2]
