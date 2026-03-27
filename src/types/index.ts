@@ -15,8 +15,8 @@ export interface Customer {
     imageUrl: string;
 }
 
-export type CreatCustomerData = Omit<Customer, 'id'>
-export type UpdateCustomerData = Partial<CreatCustomerData>
+export type CreateCustomerData = Omit<Customer, 'id'>
+export type UpdateCustomerData = Partial<CreateCustomerData>
 
 export type InvoiceStatus = 'PAGO' | 'PENDENTE'
 export interface Invoice {
