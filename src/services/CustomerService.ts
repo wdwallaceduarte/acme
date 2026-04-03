@@ -38,7 +38,7 @@ export async function findCustomerById(
     return customer
 }
 
-export async function CreateCustomer(
+export async function createCustomer(
     data: CreateCustomerData
 ): Promise<Customer> {
     
