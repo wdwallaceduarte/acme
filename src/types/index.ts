@@ -10,7 +10,7 @@ export type UpdateUserData = Partial<CreatUserData>
 
 export interface Customer {
     id: string;
-    name: string:
+    name: string;
     email: string;
     imageUrl: string;
 }
@@ -42,5 +42,5 @@ export interface ApiResponse<GENERIC> {
 
 export interface ApiError {
     error: string;
-    details: unknown;
+    details?: Record<string, string[]>
 }
