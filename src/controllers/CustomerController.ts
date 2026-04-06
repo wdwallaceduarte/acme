@@ -30,7 +30,7 @@ export type UpdateCustomerDTO = z.infer<typeof UpdateCustomerSchema>
 async function buildErrorResponse(
     message: string,
     details?: Record<string, string[]>
-): ApiError {
+): Promise<ApiError> { // Correção do codigo => ): ApiError {
     if (details) {
         return { error: message, details }
     }

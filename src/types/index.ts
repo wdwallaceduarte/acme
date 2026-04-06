@@ -35,9 +35,9 @@ export interface Revenue {
     revenue: number;
 }
 
-export interface ApiResponse<GENERIC> {
-    data: GENERIC;
-    massage?: string;
+export interface ApiResponse<T> {
+    data: T;
+    message?: string;
 }
 
 export interface ApiError {
