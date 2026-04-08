@@ -5,7 +5,7 @@ type RouteParams = {
     params: Promise<{ id: string }>
 }
 
-export async function GET({ params }: RouteParams) {
+export async function GET(request: NextRequest, { params }: RouteParams) {
     const { id } = await params
 
     const result = await CustomerController.getById(id)
