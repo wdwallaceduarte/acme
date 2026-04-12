@@ -29,16 +29,29 @@ export interface FindAllCustomersParams {
 }
 
 export type InvoiceStatus = 'PAGO' | 'PENDENTE'
+
 export interface Invoice {
     id: string
+    customerId: string
     amount: number
     date: Date
     status: InvoiceStatus
-    customer_id: string
+    customer?: {
+        name:string
+        email: string
+        imageIrl: string
+    }
 }
 
-export type CreatInvoiceData = Omit<Invoice, 'id'>
+export type CreatInvoiceData = Omit<Invoice, 'id' | 'customer'>
 export type UpdateInvoiceData = Partial<CreatInvoiceData>
+
+export interface FindAllInvoiceParams {
+    search?: string
+    page?: number
+    limit?: number
+    order?: SortOrder
+}
 
 export interface Revenue {
     month: string
