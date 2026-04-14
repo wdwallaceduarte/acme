@@ -31,17 +31,17 @@ export interface FindAllCustomersParams {
 export type InvoiceStatus = 'PAGO' | 'PENDENTE'
 
 export interface Invoice {
-    id: string
-    customerId: string
-    amount: number
-    date: Date
-    status: InvoiceStatus
-    customer?: {
-        name:string
-        email: string
-        imageIrl: string
-    }
-}
+  id: string;
+  customerId: string;
+  amount: number;
+  date: Date;
+  status: InvoiceStatus;
+  customer?: {
+    name: string;
+    email: string;
+    imageUrl: string;
+  }
+};
 
 export type CreatInvoiceData = Omit<Invoice, 'id' | 'customer'>
 export type UpdateInvoiceData = Partial<CreatInvoiceData>
@@ -66,9 +66,9 @@ export interface PaginationMeta {
     hasMore: boolean
 }
 
-export interface PaginatedResponse<GENERIC> {
-    data: GENERIC[]
-    meta: PaginationMeta
+export interface PaginatedReponse<T> {
+  data: T[]
+  meta: PaginationMeta
 }
 
 export interface ApiResponse<T> {
