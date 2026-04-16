@@ -5,7 +5,7 @@ import {
     UpdateInvoiceData,
     FindAllInvoiceParams,
     PaginatedReponse,
-    InvoiceStats
+    InvoiceStatus
 } from '@/types';
 
 export async function findAllInvoices(

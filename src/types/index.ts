@@ -43,14 +43,18 @@ export interface Invoice {
   }
 };
 
-export type CreatInvoiceData = Omit<Invoice, 'id' | 'customer'>
-export type UpdateInvoiceData = Partial<CreatInvoiceData>
+export type CreateInvoiceData = Omit<Invoice, 'id' | 'customer'>
+export type UpdateInvoiceData = Partial<CreateInvoiceData>
 
 export interface FindAllInvoiceParams {
     search?: string
     page?: number
     limit?: number
     order?: SortOrder
+    status?: InvoiceStatus
+    customerId?: string
+    dateFrom?: string
+    dateTo?: string
 }
 
 export interface Revenue {

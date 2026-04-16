@@ -7,9 +7,7 @@ import {
     deleteInvoice
 } from '@/services/InvoiceService'
 import { ApiError, SortOrder } from '@/types'
-import { create } from 'domain'
-import { unknown } from 'zod/v4'
-import { parsedType } from 'zod/v4/locales/en.cjs'
+
 
 export const CreateInvoiceSchema = z.object({
     customerId: z
@@ -20,9 +18,9 @@ export const CreateInvoiceSchema = z.object({
         .int('O valor deve ser um número inteiro.')
         .positive('O valor deve ser maior que zero.'),
     date: z.coerce
-        .data({ required_error: 'O campo é obrigatório.' }),
-    status: z.enum(['PENDENTE', 'PAGO']), { required_error: 'O campo é obrigatório.', message: 'O status deve ser PENDENTE ou PAGO.' }
-
+        .date({ required_error: 'O campo é obrigatório.' }),
+    status: z.enum(['PENDENTE', 'PAGO'], { required_error: 'O campo é obrigatório.', message: 'O status deve ser PENDENTE ou PAGO.' })
+b
 })
 
 const UpdateInvoiceSchema = CreateInvoiceSchema.partial()
