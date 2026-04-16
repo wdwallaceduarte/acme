@@ -26,6 +26,7 @@ export async function findAllInvoices(
     const safeLimit = Math.min(Math.max(1, limit), 100);
     const skip = (safePage - 1) * safeLimit;
 
+
     const conditions: object[] = [];
 
     if (search) {
@@ -36,32 +37,32 @@ export async function findAllInvoices(
                     { email: { contains: search, mode: 'insensitive' as const } }
                 ]
             }
-        });
-    };
+        })
+    }
 
     if (status) {
         conditions.push({ status });
-    };
+    }
 
     if (customerId) {
         conditions.push({ customerId });
-    };
+    }
 
-    const dateFilter: { gte?: Date; lte?: Date } = {};
+    const dateFilter: { gte?: Date; lte?: Date } = {}
 
     if (dateFrom) {
-        dateFilter.gte = new Date(dateFrom);
-    };
+        dateFilter.gte = new Date(dateFrom)
+    }
 
     if (dateTo) {
-        dateFilter.lte = new Date(dateTo);
-    };
+        dateFilter.lte = new Date(dateTo)
+    }
 
     if (Object.keys(dateFilter).length > 0) {
-        conditions.push({ date: dateFilter });
-    };
+        conditions.push({ date: dateFilter })
+    }
 
-    const where = conditions.length > 0 ? { AND: conditions } : undefined;
+    const where = conditions.length > 0 ? { AND: conditions } : undefined
 
     const [invoices, total] = await Promise.all([
         prisma.invoice.findMany({
