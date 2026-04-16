@@ -20,7 +20,7 @@ export const CreateInvoiceSchema = z.object({
     date: z.coerce
         .date({ required_error: 'O campo é obrigatório.' }),
     status: z.enum(['PENDENTE', 'PAGO'], { required_error: 'O campo é obrigatório.', message: 'O status deve ser PENDENTE ou PAGO.' })
-b
+
 })
 
 const UpdateInvoiceSchema = CreateInvoiceSchema.partial()
