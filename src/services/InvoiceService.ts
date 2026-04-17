@@ -162,5 +162,27 @@ export async function deleteInvoice(
     await prisma.invoice.delete({
         where: { id }
     });
-};
+}
+
+export async function getInvoiceStats(): Promise<InvoiceStatus> { //corrigir InvoiceStatus para InvoiceStats
+    const [pendente, pago, total] = await Promise.all([
+        prisma.invoice.aggregate({
+            _sum: { amount: true },
+            _count: { id: true },
+            where: { status: 'PENDENTE' }
+        }),
+        prisma.invoice.aggregate({
+            where: { status: 'PAGO' }
+        }),
+        prisma.invoice.count()
+    ])
+
+    return {
+        totalPendent: pendente._sum.amount ?? 0,
+        totalPagos: pago._sum.amount ?? 0,
+        countPendente: pendente._count.id,
+        countPago: pago._count.id,
+        countTotal: total
+    }
+}
 
