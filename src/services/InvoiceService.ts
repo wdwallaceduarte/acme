@@ -112,7 +112,7 @@ export async function findInvoiceById(
     }
   })
 
-  return invoice
+  return invoice as Invoice | null // antes era 'invoice' => para solucionar erro agora 'invoice as Invoice | null'
 }
 
 export async function createInvoice(
@@ -131,7 +131,7 @@ export async function createInvoice(
     }
   })
 
-  return invoice
+  return invoice as Invoice
 }
 
 export async function updateInvoice(
@@ -152,7 +152,7 @@ export async function updateInvoice(
     }
   })
 
-  return invoice
+  return invoice as Invoice
 }
 
 export async function deleteInvoice(
