@@ -88,7 +88,7 @@ export interface PaginationMeta {
   hasMore: boolean
 }
 
-export interface PaginatedReponse<T> {
+export interface PaginatedResponse<T> {
   data: T[]
   meta: PaginationMeta
 }
