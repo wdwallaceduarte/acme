@@ -7,12 +7,12 @@ import {
     deleteInvoice,
     getInvoiceStats
 } from '@/services/InvoiceService'
-import { 
-    ApiError, 
-    SortOrder, 
-    InvoiceStatus, 
+import {
+    ApiError,
+    SortOrder,
+    InvoiceStatus,
     InvoiceStats
- } from '@/types'
+} from '@/types'
 
 
 export const CreateInvoiceSchema = z.object({
@@ -71,7 +71,7 @@ export const InvoiceController = {
 
     async stats() {
         const data: InvoiceStats = await getInvoiceStats()
-        return
+        return { status: 200, body: data }
     },
 
     async getById(id: string) {
