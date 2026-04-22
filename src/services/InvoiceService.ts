@@ -4,13 +4,13 @@ import {
   CreateInvoiceData,
   UpdateInvoiceData,
   FindAllInvoiceParams,
-  PaginatedReponse,
+  PaginatedResponse,
   InvoiceStats
 } from '@/types'
 
 export async function findAllInvoices(
   params: FindAllInvoiceParams = {}
-): Promise<PaginatedReponse<Invoice>> {
+): Promise<PaginatedResponse<Invoice>> {
   const {
     search,
     page = 1,

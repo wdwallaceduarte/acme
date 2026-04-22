@@ -112,7 +112,7 @@ async function main() {
   for (const data of invoicesData) {
     await prisma.invoice.create({
       data: {
-        amout: data.amount,
+        amount: data.amount,
         status: data.status,
         date: new Date(data.date),
         customerId: data.customer.id
