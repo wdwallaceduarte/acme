@@ -27,6 +27,23 @@ git clone https://github.com/wdwallaceduarte/acme.git
 cd acme
 npm install
 
+▶️ Scripts disponíveis
+npm run dev – inicia o servidor de desenvolvimento
+
+npm run build – gera a build de produção
+
+npm run start – inicia a aplicação em produção
+
+npm run lint – executa o ESLint
+
+npm run format – formata o código com Prettier
+
+npm run type:check – checa os tipos com TypeScript
+
+npm run migrate – aplica migrations do Prisma
+
+npm run seed – popula o banco com dados iniciais
+
 📝 Commits
 Este projeto segue o padrão Conventional Commits:
 
